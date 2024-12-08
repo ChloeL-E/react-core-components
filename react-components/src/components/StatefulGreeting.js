@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 export default class StatefulGreeting extends React.Component {
   constructor(props) {
@@ -25,9 +25,9 @@ export default class StatefulGreeting extends React.Component {
       </div>
     );
   }
-}
+}*/
 
-/* component has a construvtor which sets the state of the class
+// component has a construvtor which sets the state of the class
 
 import React from "react";
 
@@ -41,16 +41,21 @@ class StatefulGreeting extends React.Component{
         };
     }
 
+    handleClick() {
+      this.setState({  // use setState method whenever you want to change the state, this will merge the two states and update it
+        introduction: "Goodbye!",
+        buttonText: "Enter!",
+      });
+    }
 
     render() {
         return (
             <div>
                 <h1>{this.state.introduction} {this.props.greeting}</h1>
-                <button>{this.state.buttonText}</button>
+                <button onClick={()=> this.handleClick()}>{this.state.buttonText}</button>
             </div>
         )
     }
 }
 
 export default StatefulGreeting;
-*/
